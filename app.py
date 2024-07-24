@@ -6,7 +6,7 @@ import time
 import validators
 
 # Enter the API key from Google Cloud Console (PageSpeed Insights)
-API_KEY = 'AIzaSyAX61XqJRg7lUWRHRKSoW2w43Ctt_XCyUg'
+API_KEY = 'YOUR_API_KEY_HERE'
 
 # Authentication and initialization of Google Sheets API
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -14,7 +14,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', sco
 client = gspread.authorize(creds)
 
 # Open the spreadsheet and select the worksheet
-spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1PPQ3UV_1HnisB-w5OHEoQ2WDOdiD5IH3icMgTEHnOZ0/edit?usp=sharing'
+spreadsheet_url = 'YOUR_SPREADSHEET_URL_HERE'
 spreadsheet = client.open_by_url(spreadsheet_url)
 worksheet = spreadsheet.sheet1
 
